@@ -96,6 +96,9 @@ systemd-tmpfiles --create /etc/tmpfiles.d/flannel.conf
 systemctl enable flannel
 
 # systemctl start etcd
+
+# runc exec etcd etcdctl set /atomic.io/network/config '{"Network":"10.40.0.0/16"}'
+
 # systemctl start flannel
 ```
 
